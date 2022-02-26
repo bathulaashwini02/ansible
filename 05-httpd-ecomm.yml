@@ -1,6 +1,6 @@
 ---
 - name: update web servers
-  hosts: web
+  hosts: n1
   become: yes
   tasks:
   - name: install httpd 
