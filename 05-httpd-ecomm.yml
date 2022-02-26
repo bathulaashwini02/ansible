@@ -20,7 +20,7 @@
       enabled: yes
  
   - name: install git
-    git:
+    yum:
       name: git
       state: present
       
