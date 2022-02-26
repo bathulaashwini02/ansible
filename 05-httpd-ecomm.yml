@@ -20,7 +20,7 @@
       enabled: yes
  
   - name: install git
-    service:
+    git:
       name: git
       state: present
       
