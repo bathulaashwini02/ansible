@@ -2,10 +2,9 @@
 - name: update web servers
   hosts: all
   become: yes
-  tasks:
   vars:
     user_name: ashwini 
-
+  tasks:
   - name: update dynamic page 
     template:
       src: no-vars.j2
