@@ -1,0 +1,16 @@
+---
+- name: update web servers
+  hosts: n1
+  become: yes
+  vars:
+    http_port: 8090 
+  tasks:
+  - name: update httpd conf file 
+    template:
+      src: httpd.j2
+      dest: /etc/httpd/conf/httpd.conf
+      
+  - name: restart httpd 
+    service:
+      name: httpd
+      state: restarted 
